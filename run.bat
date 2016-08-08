@@ -1,0 +1,1 @@
+C:\Programmation\Traduction\CommonTools\bsnes-plus-073.1b\bsnes.exe megaman7_msu1.sfc
