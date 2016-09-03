@@ -194,12 +194,15 @@ scope MSU_SoundEffectsAndCommand: {
     CheckMSUPresence(MSUNotFound)
 
     pla
+    // $F2 is a command to stop music immediately
+    cmp.b #$F2
+    beq .StopMusic
     // $F5 is a command to resume music
     cmp.b #$F5
     beq .ResumeMusic
     // $F6 is a command to fade-out music
     cmp.b #$F6
-    beq .StopMusic
+    beq .FadeOutMusic
     // If not, play the sound as the game excepts to
     bra .PlaySound
 
@@ -217,7 +220,7 @@ scope MSU_SoundEffectsAndCommand: {
     sta fadeVolume
     bra .CleanupAndReturn
 
-.StopMusic:
+.FadeOutMusic:
     sta SPC_COMM_0
 
     lda MSU_STATUS
@@ -229,6 +232,13 @@ scope MSU_SoundEffectsAndCommand: {
     sta fadeState
     lda.b #FULL_VOLUME
     sta fadeVolume
+    bra .CleanupAndReturn
+
+.StopMusic:
+    sta SPC_COMM_0
+
+    lda #$00
+    sta MSU_AUDIO_CONTROL
     bra .CleanupAndReturn
 
 MSUNotFound:
