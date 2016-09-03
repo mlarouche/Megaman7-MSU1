@@ -148,9 +148,6 @@ scope TrackNeedLooping: {
     // Capcom Logo
     cpy.b #00
     beq NoLooping
-    // Opening Part 1
-    cpy.b #01
-    beq NoLooping
     // Title Screen
     cpy.b #02
     beq NoLooping
