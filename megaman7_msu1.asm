@@ -58,6 +58,25 @@ seek($C0FFA8)
     jml MSU_VBlankUpdate
 
 // Play Music Hijack
+if {defined JAPANESE} {
+seek($C0059F)
+    jsr MSU_Main
+seek($C009CC)
+    jsr MSU_Main
+seek($C00CCC)
+    jsr MSU_Main
+seek($C00FFB)
+    jsr MSU_Main
+seek($C010E9)
+    jsr MSU_Main
+seek($C011F9)
+    jsr MSU_Main
+seek($C030C7)
+    jsr MSU_Main
+
+seek($C0319B)
+    jsr MSU_SoundEffectsAndCommand
+} else {
 seek($C00597)
     jsr MSU_Main
 seek($C009C4)
@@ -75,8 +94,9 @@ seek($C030BF)
 
 seek($C03193)
     jsr MSU_SoundEffectsAndCommand
+}
 
-seek($C07BA0)
+seek($C07BC0)
 scope MSU_Main: {
     php
     // Backup A and Y in 16-bit mode
@@ -140,7 +160,12 @@ MSUNotFound:
     pla
     plp
 
+if {defined JAPANESE} {
+    jsr $30cd
+} else {
     jsr $30c5
+}
+
     rts
 }
 

@@ -4,7 +4,7 @@ del *.pcm
 
 wav2msu -o megaman7_msu1-1.pcm -l 374656 opening_part1.wav
 wav2msu -o megaman7_msu1-2.pcm title_screen.wav
-wav2msu -o megaman7_msu1-3.pcm intro_stage.wav
+wav2msu -o megaman7_msu1-3.pcm -l 184281 intro_stage.wav
 wav2msu -o megaman7_msu1-4.pcm stage_select.wav
 wav2msu -o megaman7_msu1-5.pcm -l 42561 freeze_man.wav
 wav2msu -o megaman7_msu1-6.pcm -l 389768 cloud_man.wav

@@ -1,11 +1,11 @@
 @ECHO OFF
 
-set VOLUME=-8
+set VOLUME=-1
 
 sox 01_Intro_1.wav -b 16 opening_part1.wav trim 4890s =1864461s gain -n %VOLUME%
 sox 02_Intro_2.wav -b 16 opening_part2.wav trim 4673s gain -n %VOLUME%
 sox 03_Title.wav -b 16 title_screen.wav trim 3667s =613154s gain -n %VOLUME%
-sox 04_Opening_Stage.wav -b 16 intro_stage.wav trim 10470s =2249057s gain -n %VOLUME%
+sox 04_Opening_Stage.wav -b 16 intro_stage.wav trim 10470s =2433861s gain -n %VOLUME%
 sox 05_Bass_Treble.wav -b 16 bass_theme.wav trim 10269s =2047597s gain -n %VOLUME%
 sox 06_Password.wav -b 16 password.wav trim 4677s =513632s gain -n %VOLUME%
 sox 07_Stage_Select.wav -b 16 stage_select.wav trim 5651s =379320s gain -n %VOLUME%
@@ -36,3 +36,38 @@ sox 31_Wily_Defeated.wav -b 16 dr_wily_defeated.wav trim 4011s =317009s gain -n 
 sox 32_Staff_Roll.wav -b 16 end_credits.wav trim 2944s =2776455s gain -n %VOLUME%
 sox 33_Enter_the_Graveyard.wav -b 16 shade_man_alternate_stage_selected.wav trim 4900s =409533s gain -n %VOLUME%
 sox 34_The_Haunted_Graveyard.wav -b 16 shade_man_alternate.wav trim 8260s =3552572s gain -n %VOLUME%
+
+normalize -a -16dBFS opening_part1.wav
+normalize -a -16dBFS opening_part2.wav
+normalize -a -16dBFS title_screen.wav
+normalize -a -16dBFS intro_stage.wav
+normalize -a -16dBFS bass_theme.wav
+normalize -a -16dBFS password.wav
+normalize -a -16dBFS stage_select.wav
+normalize -a -16dBFS stage_start.wav
+normalize -a -16dBFS freeze_man.wav
+normalize -a -16dBFS burst_man.wav
+normalize -a -16dBFS cloud_man.wav
+normalize -a -16dBFS junk_man.wav
+normalize -a -16dBFS robot_museum.wav
+normalize -a -16dBFS shade_man.wav
+normalize -a -16dBFS turbo_man.wav
+normalize -a -16dBFS slash_man.wav
+normalize -a -16dBFS spring_man.wav
+normalize -a -16dBFS boss_battle1.wav
+normalize -a -16dBFS boss_defeated.wav
+normalize -a -16dBFS dr_light_lab.wav
+normalize -a -16dBFS you_get_a_weapon.wav
+normalize -a -16dBFS auto_shop.wav
+normalize -a -16dBFS dr_light_lab_destroyed.wav
+normalize -a -16dBFS dr_wily_castle.wav
+normalize -a -16dBFS wily_stage1.wav
+normalize -a -16dBFS wily_stage2.wav
+normalize -a -16dBFS wily_stage3.wav
+normalize -a -16dBFS wily_stage4.wav
+normalize -a -16dBFS boss_battle2.wav
+normalize -a -16dBFS wily_boss_battle.wav
+normalize -a -16dBFS dr_wily_defeated.wav
+normalize -a -16dBFS end_credits.wav
+normalize -a -16dBFS shade_man_alternate_stage_selected.wav
+normalize -a -16dBFS shade_man_alternate.wav
