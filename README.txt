@@ -8,7 +8,7 @@ The patched ROM needs to be named megaman7_msu1.sfc.
 
 Note that there's no emulator patch because the volume has been normalized to work on both emulators and SD2SNES (using +12 dBFS settings for the MSU-1 volume on Rev. F boards).
 
-The music pack can be found here: https://www.mediafire.com/?mu03c9s9893grgs
+The music pack can be found here: https://www.mediafire.com/?x75lh81ua42z27c
 
 Original ROM specs:
 MEGAMAN 7
